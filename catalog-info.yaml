@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: t714vzl7a-python-gitops
+  description: This is GitOps manifest for t714vzl7a-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: t714vzl7a-python
+    backstage.io/kubernetes-id: t714vzl7a-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: t714vzl7a-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:t714vzl7a-python
